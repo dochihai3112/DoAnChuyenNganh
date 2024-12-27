@@ -10,7 +10,17 @@ class VpProduct extends Model
 {
     use HasFactory;
     protected $primaryKey = 'prod_id';
-    protected $guarded = [];
+    protected $fillable = [
+        'prod_name',
+        'prod_slug',
+        'prod_price',
+        'prod_img',
+        'prod_condition',
+        'prod_status',
+        'prod_description',
+        'prod_featured',
+        'prod_cate',
+    ];
 
     public function favorite()
     {
