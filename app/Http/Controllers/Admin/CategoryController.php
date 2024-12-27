@@ -7,6 +7,7 @@ use App\Models\VpCategory;
 use Illuminate\Http\Request;
 use App\Http\Requests\AddCategoryRequest;
 use App\Http\Requests\EditCategoryRequest;
+use App\Models\VpProduct;
 use Illuminate\Support\Str;
 
 class CategoryController extends Controller
