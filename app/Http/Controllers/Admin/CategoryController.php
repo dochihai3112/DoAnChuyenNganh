@@ -45,6 +45,9 @@ class CategoryController extends Controller
     public function getDeleteCategory($id)
     {
         $category = VpCategory::find($id);
+        $deleteCate = VpProduct::where('prod_cate',$category->cate_id)->first();
+        if($deleteCate) {
+            return back()->with('error', 'Không thể xóa danh mục vì còn tồn tại sản phẩm.');
 
         $category->delete();
 
