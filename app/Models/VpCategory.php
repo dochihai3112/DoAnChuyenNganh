@@ -10,7 +10,10 @@ class VpCategory extends Model
     use HasFactory;
 
     protected $primaryKey = 'cate_id';
-    protected $guarded = [];
+    protected $fillable = [
+        'cate_name',
+        'cate_slug',
+    ];
 
     public function products () {
         return $this->hasMany(VpProduct::class,'prod_cate');
